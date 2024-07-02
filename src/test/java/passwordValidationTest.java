@@ -33,4 +33,26 @@ class passwordValidationTest {
         //Then
         assertTrue(acutal);
     }
+
+    @Test
+    public void passwordContainsDigit_when5_thenReturnTrue() {
+        //Given
+        String testPassword = "HalloTest5";
+        //When
+        boolean acutal = passwordValidation.containsDigit(testPassword);
+        //Then
+        assertTrue(acutal);
+    }
+
+    @Test
+    public void passwordContainsDigit_whenNoDigit_thenReturnFalse() {
+        //Given
+        String testPassword = "HalloTestYolo";
+        //When
+        boolean acutal = passwordValidation.containsDigit(testPassword);
+        //Then
+        assertFalse(acutal);
+    }
+
+
 }

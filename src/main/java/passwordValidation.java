@@ -1,6 +1,5 @@
 public class passwordValidation {
     public static void main(String[] args) {
-        System.out.println("Enter password");
     }
 
     public static boolean checkLength(String password) {
@@ -10,4 +9,10 @@ public class passwordValidation {
         return false;
     }
 
+    public static boolean containsDigit(String password) {
+        if (password.matches(".*\\d.*")) {
+            return true;
+        }
+        return false;
+    }
 }
