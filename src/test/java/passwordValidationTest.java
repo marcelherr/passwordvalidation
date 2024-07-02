@@ -133,4 +133,22 @@ class passwordValidationTest {
         //Then
         assertFalse(acutal);
     }
+
+    @Test
+    public void leOmegaTest_whenRandomPassword_thenReturnTrue() {
+        //Given
+        String testPassword = passwordValidation.passwordGenerator();
+        //When
+        boolean acutal1 = passwordValidation.checkLength(testPassword);
+        boolean acutal2 = passwordValidation.containsDigit(testPassword);
+        boolean acutal3 = passwordValidation.containsUpperAndLower(testPassword);
+        boolean actual4 = passwordValidation.arrayContainsPassword(testPassword);
+        boolean acutal5 = passwordValidation.containsSpecialCharacters(testPassword);
+        //Then
+        assertTrue(acutal1);
+        assertTrue(acutal2);
+        assertTrue(acutal3);
+        assertTrue(actual4);
+        assertTrue(acutal5);
+    }
 }
