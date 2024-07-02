@@ -113,4 +113,24 @@ class passwordValidationTest {
         //Then
         assertFalse(actual);
     }
+
+    @Test
+    public void passwordContainsSpecial_whenSpecial_thenReturnTrue() {
+        //Given
+        String testPassword = "MicCheck12?";
+        //When
+        boolean acutal = passwordValidation.containsSpecialCharacters(testPassword);
+        //Then
+        assertTrue(acutal);
+    }
+
+    @Test
+    public void passwordContainsSpecial_whenNoSpecial_thenReturnFalse() {
+        //Given
+        String testPassword = "MicCheck12";
+        //When
+        boolean acutal = passwordValidation.containsSpecialCharacters(testPassword);
+        //Then
+        assertFalse(acutal);
+    }
 }

@@ -2,6 +2,7 @@ public class passwordValidation {
 
     public static void main(String[] args) {
         System.out.println(containsUpperAndLower("gggGeee"));
+        System.out.println(containsSpecialCharacters("MicCheck12"));
     }
 
     public static boolean checkLength(String password) {
@@ -35,5 +36,16 @@ public class passwordValidation {
         }
         return true;
     }
+
+    public static boolean containsSpecialCharacters(String password) {
+        String specialChar = "!@#$%^&*()-_=+{}[]\\|;:'\",.<>/?";
+        for (char c : password.toCharArray()) {
+            if (specialChar.contains(Character.toString(c))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }
