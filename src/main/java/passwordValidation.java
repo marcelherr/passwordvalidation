@@ -25,4 +25,15 @@ public class passwordValidation {
         return false;
     }
 
+    public static boolean arrayContainsPassword(String password) {
+        String[] passwordArray = {"Password1", "12345678", "Password", "Test1234"};
+
+        for (String p : passwordArray) {
+            if (password == p) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

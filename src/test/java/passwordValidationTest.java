@@ -83,4 +83,34 @@ class passwordValidationTest {
         //Then
         assertFalse(acutal);
     }
+
+    @Test
+    public void checkCommonlyUsedPassword_whenHalloTest12_thenReturnTrue() {
+        //Given
+        String testPassword = "MicCheck12";
+        //When
+        boolean actual = passwordValidation.arrayContainsPassword(testPassword);
+        //Then
+        assertTrue(actual);
+    }
+
+    @Test
+    public void checkCommonlyUsedPassword_whenPassword1_thenReturnFalse() {
+        //Given
+        String testPassword = "Password1";
+        //When
+        boolean actual = passwordValidation.arrayContainsPassword(testPassword);
+        //Then
+        assertFalse(actual);
+    }
+
+    @Test
+    public void checkCommonlyUsedPassword_when12345678_thenReturnFalse() {
+        //Given
+        String testPassword = "12345678";
+        //When
+        boolean actual = passwordValidation.arrayContainsPassword(testPassword);
+        //Then
+        assertFalse(actual);
+    }
 }
