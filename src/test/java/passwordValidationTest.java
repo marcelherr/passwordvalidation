@@ -54,5 +54,33 @@ class passwordValidationTest {
         assertFalse(acutal);
     }
 
+    @Test
+    public void passwordContainsUpperAndLowerCaseLetters_whenLtHalloTest_thenReturnTrue() {
+        //Given
+        String testPassword = "LtHalloTest";
+        //When
+        boolean acutal = passwordValidation.containsUpperAndLower(testPassword);
+        //Then
+        assertTrue(acutal);
+    }
 
+    @Test
+    public void passwordContainsUpperAndLowerCaseLetters_whengfdsgdgs_thenReturnFalse() {
+        //Given
+        String testPassword = "gfdsgdgs";
+        //When
+        boolean acutal = passwordValidation.containsUpperAndLower(testPassword);
+        //Then
+        assertFalse(acutal);
+    }
+
+    @Test
+    public void passwordContainsUpperAndLowerCaseLetters_whenJHFGHJJFG_thenReturnFalse() {
+        //Given
+        String testPassword = "JHFGHJJFG";
+        //When
+        boolean acutal = passwordValidation.containsUpperAndLower(testPassword);
+        //Then
+        assertFalse(acutal);
+    }
 }
